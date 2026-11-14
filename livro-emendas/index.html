@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Materiais do livro Emendas Parlamentares na Prática (Coleção Escola Justech): planilha da ficha da emenda, prompt e modelos de comunicação para baixar.">
+<meta property="og:title" content="Emendas Parlamentares na Prática">
+<meta property="og:description" content="O caminho da emenda, passo a passo. Materiais gratuitos para o gestor e o parlamentar.">
+<meta property="og:image" content="https://escola.justechsolucoes.com.br/livro-emendas/arquivos/capa-vol1.jpg">
+<meta property="og:url" content="https://escola.justechsolucoes.com.br/livro-emendas/">
+<link rel="canonical" href="https://escola.justechsolucoes.com.br/livro-emendas/">
+<title>Emendas Parlamentares na Prática</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+html{color-scheme:light dark}
+
+/* Layout: página única de apresentação do livro, com faixa escura de abertura (a paleta da capa) e corpo claro em uma coluna de leitura; materiais em cartões. */
+:root{
+  --bg:#F6F7FB; --fg:#141433; --muted:#5C5F7A; --card:#FFFFFF; --line:#DDE0EE;
+  --navy:#120C46; --navy2:#2A2187; --accent:#12A1E6; --accent-fg:#FFFFFF; --soft:#E7F4FC;
+  --display:"Poppins",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0C0A2A; --fg:#ECEBF7; --muted:#A9ABC6; --card:#17143F; --line:#2B2866; --navy:#09062C; --navy2:#1C155F; --soft:#15244A; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#0C0A2A; --fg:#ECEBF7; --muted:#A9ABC6; --card:#17143F; --line:#2B2866; --navy:#09062C; --navy2:#1C155F; --soft:#15244A; color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:1.6rem;font-weight:600;margin-bottom:.6rem}
+h3{font-size:1.05rem;font-weight:600}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--display);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+header.top{background:var(--navy);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.marca{font-family:var(--display);font-weight:600;letter-spacing:.18em;font-size:.8rem;text-transform:uppercase}
+.marca b{color:var(--accent);font-weight:700;letter-spacing:0;text-transform:none;font-size:1.05rem;margin-left:6px}
+nav a{color:#fff;text-decoration:none;font-size:.9rem;margin-left:18px;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline}
+.hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:48px 56px}
+.hero h1{font-size:clamp(2rem,4.5vw,3.1rem);font-weight:700}
+.hero h1 span{color:var(--accent)}
+.hero .sub{font-size:1.15rem;opacity:.92;margin:14px 0 6px}
+.hero .vol{font-family:var(--display);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin-bottom:26px}
+.hero img{width:min(100%,340px);display:block;margin:0 auto;border-radius:6px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:8px;padding:12px 18px;font:600 .95rem var(--body);cursor:pointer;text-decoration:none}
+.btn.pri{background:var(--accent);color:var(--accent-fg)}
+.btn.sec{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn[disabled]{opacity:.55;cursor:default}
+section{padding-block:48px}
+section+section{border-top:1px solid var(--line)}
+.lead{font-size:1.08rem;max-width:68ch}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.passos{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 24px;counter-reset:p}
+.passos li{counter-increment:p;padding-left:2.4rem;position:relative;font-size:.95rem}
+.passos li::before{content:counter(p);position:absolute;left:0;top:.1rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--soft);color:var(--navy2);font:600 .85rem var(--display);display:grid;place-items:center}
+:root[data-theme="dark"] .passos li::before{color:#fff}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .passos li::before{color:#fff} }
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card .tipo{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.card p{color:var(--muted);font-size:.93rem;margin:0;flex:1}
+.card .btn{align-self:flex-start;background:var(--navy2);color:#fff}
+.card .meta{font-size:.78rem;color:var(--muted)}
+.aviso{background:var(--soft);border-radius:10px;padding:16px 18px;font-size:.93rem;margin-top:22px}
+.autor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+form.news{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;max-width:720px}
+form.news input{padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font:400 .95rem var(--body);min-width:0}
+form.news label{font-size:.8rem;color:var(--muted);display:block;margin-bottom:4px}
+.status{font-size:.9rem;color:var(--muted);margin-top:10px;min-height:1.4em}
+footer{background:var(--navy);color:#fff;padding-block:28px;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;opacity:.9}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:36px 40px}
+  .hero img{order:-1;width:min(70%,260px)}
+  .autor{grid-template-columns:1fr}
+  form.news{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:no-preference){ .btn{transition:transform .15s} .btn:hover{transform:translateY(-1px)} }
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <div class="marca">Escola <b>JusTECH</b></div>
+  <nav><a href="#livro">O livro</a><a href="#materiais">Materiais</a><a href="#autor">Autor</a><a href="#novidades">Novidades</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:#7FD0F5">Coleção Escola Justech</div>
+    <h1>Emendas Parlamentares <span>na Prática</span></h1>
+    <p class="sub">O caminho da emenda, passo a passo: do pedido ao parlamentar à prestação de contas.</p>
+    <div class="vol">Volume 1 · A emenda federal, do pedido à prestação de contas</div>
+    <div class="cta">
+      <a class="btn pri" href="#materiais">Materiais do leitor</a>
+      <a class="btn sec" href="#livro">Conheça o livro</a>
+    </div>
+  </div>
+  <img src="arquivos/capa-vol1.jpg" srcset="arquivos/capa-vol1@2x.jpg 2x" alt="Capa do Volume 1: mapa do Brasil com setas saindo de Brasília para os Municípios" width="605" height="869">
+</div></div>
+
+<section id="livro"><div class="wrap">
+  <div class="eyebrow">O livro</div>
+  <h2>Um manual de caminho, para quem pede, aprova e executa a emenda</h2>
+  <div class="cols">
+    <div>
+      <p class="lead">A emenda parlamentar passou a indicar o destino, o valor e, muitas vezes, o beneficiário do recurso, que sai do orçamento de um ente para ser gasto por outro. Desde 2024, o Supremo Tribunal Federal exige transparência e rastreabilidade de todas as espécies de emenda, também nos Estados e nos Municípios. Para quem decide e para quem executa, a pergunta passou a ser quem responde pelo dinheiro.</p>
+      <p>Este manual responde em linguagem direta, com base nas normas e nas decisões até outubro de 2026. Cada passo diz o que acontece, quem faz o quê no Executivo e no Legislativo, como se faz, o que se exige hoje, os erros que custam caro e o que conferir antes de seguir. Um caso-guia, o Município de Lagoa Serena, acompanha uma emenda federal da indicação à prestação de contas.</p>
+      <p><strong>Para quem.</strong> Prefeitos e Governadores, secretários de finanças e ordenadores de despesas, controladores internos e procuradores, deputados, senadores, vereadores e assessores.</p>
+      <p><strong>Volume 2.</strong> As emendas impositivas no Estado e no Município: lei orgânica, LDO e regimento, o rito do vereador, a execução pela Prefeitura, a emenda do deputado estadual e os modelos de emenda à lei orgânica e de decreto. Em preparação.</p>
+    </div>
+    <div>
+      <h3 style="margin-bottom:12px">Os nove passos do Volume 1</h3>
+      <ol class="passos">
+        <li>O que é a emenda e de quem é o dinheiro</li>
+        <li>O pedido: como o gestor leva o projeto ao parlamentar</li>
+        <li>No parlamento: apresentar, aprovar, indicar</li>
+        <li>A escolha do caminho: transferência especial ou com finalidade definida</li>
+        <li>A proposta e o plano de trabalho</li>
+        <li>O dinheiro chega: conta, código e comunicações</li>
+        <li>Gastar certo: licitação, contrato e pagamento</li>
+        <li>Mostrar o que fez: relatório de gestão e portal</li>
+        <li>Quando algo dá errado: impedimento, remanejamento, eleição e responsabilidade</li>
+      </ol>
+      <p style="margin-top:16px;font-size:.93rem;color:var(--muted)">Apêndices: roteiro de análise da emenda recebida, calendário anual, a ficha da emenda montada com inteligência artificial, modelos de comunicação, base legal consolidada e glossário.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="materiais"><div class="wrap">
+  <div class="eyebrow">Materiais do leitor</div>
+  <h2>A planilha, o prompt e os modelos de ofício, prontos para usar</h2>
+  <p class="lead">O Apêndice C do livro traz um prompt que faz um assistente de inteligência artificial montar a ficha da emenda. Quem preferir pode baixar a planilha já montada, sem nome de Município, e os oito modelos de comunicação do Apêndice D em Word.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="tipo">Planilha · Excel</div>
+      <h3>Ficha da emenda, modelo em branco</h3>
+      <p>Sete abas: capa com índice e atalho "Nova emenda", fichas verticais (uma coluna por emenda, preenchida como um formulário), lançamentos, comunicações, prazos calculados, página da emenda para publicar no portal e instruções. Sem macros; abre no Excel e no Google Planilhas.</p>
+      <a class="btn" href="arquivos/ficha-da-emenda-modelo.xlsx" download="Ficha da emenda - modelo.xlsx">Baixar .xlsx</a>
+      <div class="meta">Versão 1.1, 14 de novembro de 2026</div>
+    </div>
+    <div class="card">
+      <div class="tipo">Planilha · Excel</div>
+      <h3>Ficha da emenda, exemplo preenchido</h3>
+      <p>A mesma planilha com a emenda de Lagoa Serena lançada, para ver como cada aba se comporta. As linhas de exemplo estão marcadas para apagar.</p>
+      <a class="btn" href="arquivos/ficha-da-emenda-exemplo.xlsx" download="Ficha da emenda - exemplo preenchido.xlsx">Baixar .xlsx</a>
+      <div class="meta">Versão 1.1, 14 de novembro de 2026</div>
+    </div>
+    <div class="card">
+      <div class="tipo">Prompt · texto</div>
+      <h3>O prompt do Apêndice C</h3>
+      <p>Para copiar e colar no assistente de inteligência artificial que o Município tiver, com o nome do Município e o Estado nos lugares indicados.</p>
+      <a class="btn" href="arquivos/prompt-ficha-da-emenda.txt" download="Prompt - ficha da emenda.txt">Baixar .txt</a>
+      <div class="meta">Texto idêntico ao do livro</div>
+    </div>
+    <div class="card">
+      <div class="tipo">Modelos · Word</div>
+      <h3>Oito modelos de comunicação</h3>
+      <p>Pedido ao parlamentar, resposta a diligência, comunicações do recebimento à Câmara, ao TCU e ao tribunal de contas do Estado, notificação ao conselho, remanejamento e comunicação de irregularidade.</p>
+      <a class="btn" href="arquivos/modelos-de-comunicacao-oficios.zip" download="Modelos de comunicacao - oficios.zip">Baixar .zip</a>
+      <div class="meta">Oito arquivos .docx, Times New Roman 12</div>
+    </div>
+  </div>
+  <div class="aviso"><strong>Como usar.</strong> Abra uma ficha por emenda no dia da indicação, pelo atalho "Nova emenda"; lance cada movimento na aba Lançamentos, nunca na ficha; registre cada ofício na aba Comunicações; consulte a aba Prazos toda semana; gere a Página da emenda a cada pagamento e publique no portal. A planilha não substitui o sistema contábil nem o Transferegov.br, e nenhum dado deve ser preenchido por estimativa ou por sugestão de assistente de inteligência artificial.</div>
+  </div></section>
+
+<section id="autor"><div class="wrap autor">
+  <div>
+    <div class="eyebrow">O autor</div>
+    <h2>Marcos Antônio Leite Ramalho Júnior</h2>
+    <p>Advogado, especialista em Direito Processual Civil, e Procurador-Geral do Município de Conde, na Paraíba, desde 2021. Em 2025, fundou a Justech Soluções Governamentais, da qual a Escola Justech é o braço educacional. Escreve a partir do que faz todos os dias: analisar, executar e responder por emendas que chegam ao Município.</p>
+  </div>
+  <div>
+    <div class="eyebrow">Escola Justech</div>
+    <h2>Formação para quem trabalha com o dinheiro público</h2>
+    <p>A Escola Justech reúne os livros e os cursos da Justech Soluções Governamentais, empresa de tecnologia que desenvolve sistemas para resolver problemas diários de órgãos públicos. O primeiro curso, sobre emendas impositivas, nasce deste livro, com uma trilha para as Câmaras Municipais e outra para o gestor que executa.</p>
+  </div>
+</div></section>
+
+<section id="novidades"><div class="wrap">
+  <div class="eyebrow">Novidades</div>
+  <h2>Receba as atualizações da planilha, o Volume 2 e os cursos</h2>
+  <p class="lead">Deixe o seu e-mail para ser avisado quando a planilha for atualizada e quando o Volume 2 e os cursos da Escola Justech forem lançados. Nada além disso: o e-mail não é cedido a terceiros e o cadastro pode ser cancelado a qualquer momento.</p>
+  <p>O cadastro para receber as novidades será aberto nesta página em breve.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div>Justech Soluções Governamentais · Escola Justech · João Pessoa, PB</div>
+  <div>Materiais gratuitos do livro Emendas Parlamentares na Prática, volume 1 · versão 1.1, 14 de novembro de 2026</div>
+</div></footer>
+</body>
+</html>
