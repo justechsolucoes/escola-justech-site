@@ -66,6 +66,10 @@ section+section{border-top:1px solid var(--line)}
 .card p{color:var(--muted);font-size:.93rem;margin:0;flex:1}
 .card .btn{align-self:flex-start;background:var(--navy2);color:#fff}
 .card .meta{font-size:.78rem;color:var(--muted)}
+.card.wide{grid-column:1 / -1}
+.lista{list-style:none;padding:0;margin:4px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:6px 18px}
+.lista a,.lista .lnk{color:var(--accent);text-decoration:none;font-weight:500;font-size:.95rem;background:none;border:0;padding:0;cursor:pointer;font-family:var(--body);text-align:left}
+.lista a:hover,.lista .lnk:hover{text-decoration:underline}
 .aviso{background:var(--soft);border-radius:10px;padding:16px 18px;font-size:.93rem;margin-top:22px}
 .autor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
 form.news{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;max-width:720px}
@@ -158,12 +162,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <a class="btn" href="arquivos/prompt-ficha-da-emenda.txt" download="Prompt - ficha da emenda.txt">Baixar .txt</a>
       <div class="meta">Texto idêntico ao do livro</div>
     </div>
-    <div class="card">
+    <div class="card wide">
       <div class="tipo">Modelos · Word</div>
       <h3>Oito modelos de comunicação</h3>
-      <p>Pedido ao parlamentar, resposta a diligência, comunicações do recebimento à Câmara, ao TCU e ao tribunal de contas do Estado, notificação ao conselho, remanejamento e comunicação de irregularidade.</p>
-      <a class="btn" href="arquivos/modelos-de-comunicacao-oficios.zip" download="Modelos de comunicacao - oficios.zip">Baixar .zip</a>
-      <div class="meta">Oito arquivos .docx, Times New Roman 12</div>
+      <p>Cada ofício em um arquivo .docx (Times New Roman 12), com os dados variáveis entre colchetes e uma observação sobre quando e como enviar.</p>
+      <ul class="lista">
+        <li><a href="arquivos/oficios/modelo-d-1-pedido-de-emenda-ao-parlamentar.docx" download="Modelo D.1 - Pedido de emenda ao parlamentar.docx">D.1 Pedido de emenda ao parlamentar</a></li>
+        <li><a href="arquivos/oficios/modelo-d-2-resposta-a-diligencia-do-orgao-federal.docx" download="Modelo D.2 - Resposta a diligência do órgão federal.docx">D.2 Resposta a diligência do órgão federal</a></li>
+        <li><a href="arquivos/oficios/modelo-d-3-comunicacao-de-recebimento-a-camara-municipal.docx" download="Modelo D.3 - Comunicação de recebimento à Câmara Municipal.docx">D.3 Comunicação de recebimento à Câmara Municipal</a></li>
+        <li><a href="arquivos/oficios/modelo-d-4-comunicacao-de-recebimento-ao-tribunal-de-contas-da-uniao.docx" download="Modelo D.4 - Comunicação de recebimento ao Tribunal de Contas da União.docx">D.4 Comunicação de recebimento ao Tribunal de Contas da União</a></li>
+        <li><a href="arquivos/oficios/modelo-d-5-comunicacao-de-recebimento-ao-tribunal-de-contas-do-estado.docx" download="Modelo D.5 - Comunicação de recebimento ao tribunal de contas do Estado.docx">D.5 Comunicação de recebimento ao tribunal de contas do Estado</a></li>
+        <li><a href="arquivos/oficios/modelo-d-6-notificacao-ao-conselho-municipal-da-area.docx" download="Modelo D.6 - Notificação ao conselho municipal da área.docx">D.6 Notificação ao conselho municipal da área</a></li>
+        <li><a href="arquivos/oficios/modelo-d-7-pedido-de-remanejamento-ao-autor-da-emenda.docx" download="Modelo D.7 - Pedido de remanejamento ao autor da emenda.docx">D.7 Pedido de remanejamento ao autor da emenda</a></li>
+        <li><a href="arquivos/oficios/modelo-d-8-comunicacao-de-irregularidade-ao-tribunal-de-contas.docx" download="Modelo D.8 - Comunicação de irregularidade ao tribunal de contas.docx">D.8 Comunicação de irregularidade ao tribunal de contas</a></li>
+      </ul>
+      <div class="meta">Apêndice D do Volume 1</div>
     </div>
   </div>
   <div class="aviso"><strong>Como usar.</strong> Abra uma ficha por emenda no dia da indicação, pelo atalho "Nova emenda"; lance cada movimento na aba Lançamentos, nunca na ficha; registre cada ofício na aba Comunicações; consulte a aba Prazos toda semana; gere a Página da emenda a cada pagamento e publique no portal. A planilha não substitui o sistema contábil nem o Transferegov.br, e nenhum dado deve ser preenchido por estimativa ou por sugestão de assistente de inteligência artificial.</div>
